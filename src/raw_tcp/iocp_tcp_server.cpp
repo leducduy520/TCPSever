@@ -1,5 +1,5 @@
-#include "iocp_tcp_server.hpp"
 #include <string>
+#include "iocp_tcp_server.hpp"
 
 IOCPTCPServer::IOCPTCPServer(unsigned short port, int backlog) : port_(port), backlog_(backlog) {
     if (WSAStartup(MAKEWORD(2, 2), &wsaData_) != 0) {
